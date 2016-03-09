@@ -1,0 +1,108 @@
+<!doctype html>
+<html data-framework="vue">
+    <head>
+        <meta charset="utf-8">
+        <title>排课页面</title>
+        <link rel="Shortcut Icon" href="image" type="image/x-icon">
+        <link rel="stylesheet" href="../node_modules/bootstrap-3.3.6-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/courseArrange.css">
+        <style> [v-cloak] { display: none; } </style>
+    </head>
+    <body>
+    <section class="main">
+    <label>选择年级</label>
+    <select>
+        <option value="grade1" selected>大一</option>
+        <option value="grade2">大二</option>
+        <option value="grade3">大三</option>
+        <option value="grade4">大四</option>
+    </select>
+    <table class="tbl">
+    	<tr>
+    	    <td></td>
+    	    <td>周一</td>
+    	    <td>周二</td>
+    	    <td>周三</td>
+    	    <td>周四</td>
+    	    <td>周五</td>
+    	</tr>
+    	<tr class="tr_c">
+    	    <td>第一节</td>
+    	    <td id="T1"></td>
+    	    <td id="T6"></td>
+    	    <td id="T11"></td>
+    	    <td id="T16"></td>
+    	    <td id="T21"></td>
+    	</tr>
+    	<tr>
+    	    <td>第二节</td>
+    	    <td id="T2"></td>
+    	    <td id="T7"></td>
+    	    <td id="T12"></td>
+    	    <td id="T17"></td>
+    	    <td id="T22"></td>
+    	</tr>
+    	<tr class="tr_c">
+    	    <td>第三节</td>
+    	    <td id="T3"></td>
+    	    <td id="T8"></td>
+    	    <td id="T13"></td>
+    	    <td id="T18"></td>
+    	    <td id="T23"></td>
+    	</tr>
+    	<tr>
+    	    <td>第四节</td>
+    	    <td id="T4"></td>
+    	    <td id="T9"></td>
+    	    <td id="T14"></td>
+    	    <td id="T19"></td>
+    	    <td id="T24"></td>
+    	</tr>
+    	<tr class="tr_c">
+    	    <td>第五节</td>
+    	    <td id="T5"></td>
+    	    <td id="T10"></td>
+    	    <td id="T15"></td>
+    	    <td id="T20"></td>
+    	    <td id="T25"></td>
+    	</tr>
+    </table>
+    <!-- <div>未排课课程</div>
+    <table class="tbl">
+        <tr>
+            <td>教学计划号</td>
+            <td>课程名称</td>
+            <td>年级</td>
+            <td>班级</td>
+            <td>教师姓名</td>
+        </tr>
+        <tr v-for="course in courseList">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table> -->
+    </section>
+    <!-- <form role="form">
+  <div class="form-group">
+    <label for="exampleInputEmail1">邮箱：</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="请输入您的邮箱地址">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">密码</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入您的邮箱密码">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> 记住密码
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">进入邮箱</button>
+</form>  -->
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="../scripts/courseArrange.js"></script>    
+    </body>
+</html>
