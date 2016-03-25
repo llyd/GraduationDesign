@@ -43,9 +43,12 @@ module.exports = {
 		getRoom: function () {	
 			var self = this;
 			$.ajax({
-				type:"get",
-				url:"http://localhost:1337/Room/find",
-				dataType:"jsonp",
+				url:"/Room/getData",
+				method:"POST",
+				data:"1",
+	      contentType: false,
+	      processData: false,
+	      cache: false,
 				success:function(json){
 					if (json || json.rooms.length > 0){
 						self.rooms =  JSON.parse(json.rooms);
@@ -55,9 +58,12 @@ module.exports = {
 		},
 		addData: function () {
 			$.ajax({
-				type:"get",
-				url:"http://localhost:1337/Room/add",
-				dataType:"jsonp",
+				url:"/Room/addData",
+				method:"POST",
+				data:"1",
+	      contentType: false,
+	      processData: false,
+	      cache: false,
 				success:function(json){
 					if (json || json.rooms.length > 0){
 						self.rooms =  JSON.parse(json.rooms);
@@ -69,9 +75,12 @@ module.exports = {
 		deleteData: function () {
 
 			$.ajax({
-				type:"get",
-				url:"http://localhost:1337/Room/delete",
-				dataType:"jsonp",
+				url:"/Room/deleteData",
+				method:"POST",
+				data:"1",
+	      contentType: false,
+	      processData: false,
+	      cache: false,
 				success:function(json){
 					if (json || json.rooms.length > 0){
 						self.rooms =  JSON.parse(json.rooms);
@@ -82,9 +91,12 @@ module.exports = {
 		},
 		changeData: function () {
 			$.ajax({
-				type:"get",
-				url:"http://localhost:1337/Room/change",
-				dataType:"jsonp",
+				url:"/Room/changeData",
+				method:"POST",
+				data:"1",
+	      contentType: false,
+	      processData: false,
+	      cache: false,
 				success:function(json){
 					if (json || json.rooms.length > 0){
 						self.rooms =  JSON.parse(json.rooms);

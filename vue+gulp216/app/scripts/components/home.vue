@@ -1,7 +1,7 @@
 <template>
 <div id="app">
 	<header>
-		<img src="../images/logo.jpg" alt="logo" class="logo"/>
+		<img src="_tmp/images/logo.jpg" alt="logo" class="logo"/>
 		<span class="topic">ECNU软件学院教务排课系统</span>
 		<span class="zhuxiao">注销</span>
 	</header>

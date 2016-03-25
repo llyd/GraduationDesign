@@ -37,25 +37,68 @@
 		},
 		computed: {
 			classes: function () {
-				$.post("localhost:1337/courseQuery/class","",function(returnData){
-					return returnData;
-				})
+				var self = this;
+				$.ajax({
+			  	url:"/CourseQuery/class",
+					method:"POST",
+					data:"1",
+	    	  contentType: false,
+	    	  processData: false,
+	    	  cache: false,
+	    	  success:function(json){
+						// if (json || json.courses.length > 0){
+						// 	self.courses =  JSON.parse(json.courses);
+						// }				
+					}
+				});
 			},
 			rooms: function () {
-				$.post("localhost:1337/courseQuery/room","",function(returnData){
-					return returnData;
-				})
-
+				var self = this;
+					$.ajax({
+				  	url:"/CourseQuery/room",
+						method:"POST",
+						data:"1",
+		    	  contentType: false,
+		    	  processData: false,
+		    	  cache: false,
+		    	  success:function(json){
+							// if (json || json.courses.length > 0){
+							// 	self.courses =  JSON.parse(json.courses);
+							// }				
+						}
+					});
 			},
 			teachers: function () {
-				$.post("localhost:1337/courseQuery/teacher","",function(returnData){
-					return returnData;
-				})
+				var self = this;
+				$.ajax({
+			  	url:"/CourseQuery/teachers",
+					method:"POST",
+					data:"1",
+	    	  contentType: false,
+	    	  processData: false,
+	    	  cache: false,
+	    	  success:function(json){
+						// if (json || json.courses.length > 0){
+						// 	self.courses =  JSON.parse(json.courses);
+						// }				
+					}
+				});
 			},
 			courseSche: function () {
-				$.post("localhost:1337/courseQuery/courseSche","",function(returnData){
-					return returnData;
-				})
+				var self = this;
+				$.ajax({
+			  	url:"/CourseQuery/courseSche",
+					method:"POST",
+					data:"1",
+	    	  contentType: false,
+	    	  processData: false,
+	    	  cache: false,
+	    	  success:function(json){
+						// if (json || json.courses.length > 0){
+						// 	self.courses =  JSON.parse(json.courses);
+						// }				
+					}
+				});
 			}
 		}
 	}

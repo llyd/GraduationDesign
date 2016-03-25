@@ -2,9 +2,7 @@
   "name": "hlj",
   "description": "vue demo",
   "main": "gulpfile.js",
-  "authors": [
-    "侯林江 <linjiang.hou@baidao.com>"
-  ],
+  "authors": [],
   "license": "ISC",
   "homepage": "https://github.com/lin-123/vueDemo",
   "moduleType": [],

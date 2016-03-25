@@ -15,8 +15,8 @@
 			<td>{{academy.className}}</td>
 			<td>{{academy.classSize}}</td>
 			<td>{{academy.spareTime}}</td>
-			<!--td>{{academy.courseId}}</td-->
-			<td>{{academy.courseName}}</td>
+			<!--td>{{academy.courseIds}}</td-->
+			<td>{{academy.courseNames}}</td>
 			<td><span @click="changeData(academy.id)">修改</span><span @click="deleteData(academy.id)">删除</span></td>
 		</tr>
 	</table>
@@ -32,27 +32,36 @@ module.exports = {
 		}
 	},
 	ready: function () {
-		this.getAcademys()
+		this.getData()
 	},
+
 	methods: {
-		getAcademys: function () {
+		getData: function () {
 			var self = this;
 			$.ajax({
-				type:"get",
-				url:"http://localhost:1337/Academy/find",
-				dataType:"jsonp",
-				success:function(json){
-					if (json || json.academys.length > 0){
-						self.academys =  JSON.parse(json.academys);
-					}				
+				url:"/Academy/getData",
+				method:"POST",
+				data:"1",
+	      contentType: false,
+	      processData: false,
+	      cache: false,
+				success:function(data){
+					// if (data || data.academys.length > 0){
+					// 	self.academys =  JSON.parse(data.academys);
+					// }	
+					console.log(data);			
 				}
 			});
 		},
 		addData: function () {
+			var self = this;
 			$.ajax({
-				type:"get",
-				url:"http://localhost:1337/Academy/add",
-				dataType:"jsonp",
+				url:"/Academy/addData",
+				method:"POST",
+				data:"1",
+	      contentType: false,
+	      processData: false,
+	      cache: false,
 				success:function(json){
 					if (json || json.academys.length > 0){
 						self.academys =  JSON.parse(json.academys);
@@ -61,10 +70,14 @@ module.exports = {
 			});
 		},
 		deleteData: function () {
+			var self = this;
 			$.ajax({
-				type:"get",
-				url:"http://localhost:1337/Academy/delete",
-				dataType:"jsonp",
+				url:"/Academy/deleteData",
+				method:"POST",
+				data:"1",
+	      contentType: false,
+	      processData: false,
+	      cache: false,
 				success:function(json){
 					if (json || json.academys.length > 0){
 						self.academys =  JSON.parse(json.academys);
@@ -73,10 +86,14 @@ module.exports = {
 			});
 		},
 		changeData: function () {
+			var self = this;
 			$.ajax({
-				type:"get",
-				url:"http://localhost:1337/Academy/change",
-				dataType:"jsonp",
+				url:"/Academy/changeData",
+				method:"POST",
+				data:"1",
+	      contentType: false,
+	      processData: false,
+	      cache: false,
 				success:function(json){
 					if (json || json.academys.length > 0){
 						self.academys =  JSON.parse(json.academys);

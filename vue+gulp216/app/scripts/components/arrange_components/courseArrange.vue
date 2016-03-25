@@ -87,9 +87,12 @@
 			getHebans: function () {
 				var self = this;
 				$.ajax({
-					type:"get",
-					url:"http://localhost:1337/CourseArrange/findHebans",
-					dataType:"jsonp",
+					url:"/CourseArrange/findHebans",
+					method:"POST",
+					data:"1",
+	    	  contentType: false,
+	    	  processData: false,
+	    	  cache: false,
 					success:function(json){
 						if (json || json.hebans.length > 0){
 							self.hebans =  JSON.parse(json.hebans);
@@ -101,9 +104,12 @@
 				$("#step3").show();
 				var self = this;
 				$.ajax({
-					type:"get",
-					url:"http://localhost:1337/CourseArrange/findCourses",
-					dataType:"jsonp",
+					url:"/CourseArrange/findCourses",
+					method:"POST",
+					data:"1",
+	    	  contentType: false,
+	    	  processData: false,
+	    	  cache: false,
 					success:function(json){
 						if (json || json.courses.length > 0){
 							self.courses =  JSON.parse(json.courses);
@@ -115,9 +121,12 @@
 			$("#step4").show();//换成弹浮层（等待中）
 			var self = this;
 				$.ajax({
-					type:"get",
-					url:"http://localhost:1337/CourseArrange/startArrange",
-					dataType:"jsonp",
+					url:"/CourseArrange/startArrange",
+					method:"POST",
+					data:"1",
+	    	  contentType: false,
+	    	  processData: false,
+	    	  cache: false,
 					success:function(json){
 						alert("排课完成");
 						if (json || json.UnArrangeCourses.length > 0){

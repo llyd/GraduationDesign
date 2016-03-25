@@ -1,4 +1,4 @@
-import './utils/service'
+// import './utils/service'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import home from './components/home'

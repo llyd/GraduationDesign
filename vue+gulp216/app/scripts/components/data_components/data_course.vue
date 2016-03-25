@@ -38,9 +38,12 @@ module.exports = {
 		getCourses: function () {
 			var self = this;
 			$.ajax({
-				type:"get",
-				url:"http://localhost:1337/Course/find",
-				dataType:"jsonp",
+				url:"/Course/getData",
+				method:"POST",
+				data:"1",
+	      contentType: false,
+	      processData: false,
+	      cache: false,
 				success:function(json){
 					if (json || json.courses.length > 0){
 						self.courses =  JSON.parse(json.courses);
@@ -50,9 +53,12 @@ module.exports = {
 		},
 		addData: function () {
 			$.ajax({
-				type:"get",
-				url:"http://localhost:1337/Course/add",
-				dataType:"jsonp",
+				url:"/Course/addData",
+				method:"POST",
+				data:"1",
+	      contentType: false,
+	      processData: false,
+	      cache: false,
 				success:function(json){
 					if (json || json.courses.length > 0){
 						self.courses =  JSON.parse(json.courses);
@@ -62,9 +68,12 @@ module.exports = {
 		},
 		deleteData: function () {
 			$.ajax({
-				type:"get",
-				url:"http://localhost:1337/Course/delete",
-				dataType:"jsonp",
+				url:"/Course/deleteData",
+				method:"POST",
+				data:"1",
+	      contentType: false,
+	      processData: false,
+	      cache: false,
 				success:function(json){
 					if (json || json.courses.length > 0){
 						self.courses =  JSON.parse(json.courses);
@@ -74,9 +83,12 @@ module.exports = {
 		},
 		changeData: function () {
 			$.ajax({
-				type:"get",
-				url:"http://localhost:1337/Course/change",
-				dataType:"jsonp",
+				url:"/Course/changeData",
+				method:"POST",
+				data:"1",
+	      contentType: false,
+	      processData: false,
+	      cache: false,
 				success:function(json){
 					if (json || json.courses.length > 0){
 						self.courses =  JSON.parse(json.courses);

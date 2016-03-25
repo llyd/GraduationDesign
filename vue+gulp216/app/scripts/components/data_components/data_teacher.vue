@@ -42,9 +42,12 @@ module.exports = {
 		getTeachers: function () {
 			var self = this;
 			$.ajax({
-				type:"get",
-				url:"http://localhost:1337/Teacher/find",
-				dataType:"jsonp",
+				url:"/Teacher/getData",
+				method:"POST",
+				data:"1",
+	      contentType: false,
+	      processData: false,
+	      cache: false,
 				success:function(json){
 					if (json || json.teachers.length > 0){
 						self.teachers =  JSON.parse(json.teachers);
@@ -55,9 +58,12 @@ module.exports = {
 		},
 		addData: function () {
 			$.ajax({
-				type:"get",
-				url:"http://localhost:1337/Teacher/add",
-				dataType:"jsonp",
+				url:"/Teacher/addData",
+				method:"POST",
+				data:"1",
+	      contentType: false,
+	      processData: false,
+	      cache: false,
 				success:function(json){
 					if (json || json.teachers.length > 0){
 						self.teachers =  JSON.parse(json.teachers);
@@ -68,9 +74,12 @@ module.exports = {
 		},
 		deleteData: function () {
 			$.ajax({
-				type:"get",
-				url:"http://localhost:1337/Teacher/delete",
-				dataType:"jsonp",
+				url:"/Teacher/deleteData",
+				method:"POST",
+				data:"1",
+	      contentType: false,
+	      processData: false,
+	      cache: false,
 				success:function(json){
 					if (json || json.teachers.length > 0){
 						self.teachers =  JSON.parse(json.teachers);
@@ -80,9 +89,12 @@ module.exports = {
 		},
 		changeData: function () {
 			$.ajax({
-				type:"get",
-				url:"http://localhost:1337/Teacher/change",
-				dataType:"jsonp",
+				url:"/Teacher/changeData",
+				method:"POST",
+				data:"1",
+	      contentType: false,
+	      processData: false,
+	      cache: false,
 				success:function(json){
 					if (json || json.teachers.length > 0){
 						self.teachers =  JSON.parse(json.teachers);
