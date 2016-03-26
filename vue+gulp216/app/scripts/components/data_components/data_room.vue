@@ -49,9 +49,9 @@ module.exports = {
 	      contentType: false,
 	      processData: false,
 	      cache: false,
-				success:function(json){
-					if (json || json.rooms.length > 0){
-						self.rooms =  JSON.parse(json.rooms);
+				success:function(data){
+					if (data || data.length > 0){
+						self.rooms =  JSON.parse(data);
 					}				
 				}
 			});
@@ -64,9 +64,9 @@ module.exports = {
 	      contentType: false,
 	      processData: false,
 	      cache: false,
-				success:function(json){
-					if (json || json.rooms.length > 0){
-						self.rooms =  JSON.parse(json.rooms);
+				success:function(data){
+					if (data || data.length > 0){
+						self.rooms =  JSON.parse(data);
 					}	
 				}
 			});
@@ -81,9 +81,9 @@ module.exports = {
 	      contentType: false,
 	      processData: false,
 	      cache: false,
-				success:function(json){
-					if (json || json.rooms.length > 0){
-						self.rooms =  JSON.parse(json.rooms);
+				success:function(data){
+					if (data || data.length > 0){
+						self.rooms =  JSON.parse(data);
 					}	
 				}
 			});
@@ -97,9 +97,9 @@ module.exports = {
 	      contentType: false,
 	      processData: false,
 	      cache: false,
-				success:function(json){
-					if (json || json.rooms.length > 0){
-						self.rooms =  JSON.parse(json.rooms);
+				success:function(data){
+					if (data || data.length > 0){
+						self.rooms =  JSON.parse(data);
 					}	
 				}
 			});

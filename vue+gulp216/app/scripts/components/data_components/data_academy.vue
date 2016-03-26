@@ -46,10 +46,9 @@ module.exports = {
 	      processData: false,
 	      cache: false,
 				success:function(data){
-					// if (data || data.academys.length > 0){
-					// 	self.academys =  JSON.parse(data.academys);
-					// }	
-					console.log(data);			
+					if (data || data.length > 0){
+						self.academys =  JSON.parse(data);
+					}				
 				}
 			});
 		},
@@ -62,9 +61,9 @@ module.exports = {
 	      contentType: false,
 	      processData: false,
 	      cache: false,
-				success:function(json){
-					if (json || json.academys.length > 0){
-						self.academys =  JSON.parse(json.academys);
+				success:function(data){
+					if (data || data.length > 0){
+						self.academys =  JSON.parse(data);
 					}				
 				}
 			});
@@ -78,9 +77,9 @@ module.exports = {
 	      contentType: false,
 	      processData: false,
 	      cache: false,
-				success:function(json){
-					if (json || json.academys.length > 0){
-						self.academys =  JSON.parse(json.academys);
+				success:function(data){
+					if (data || data.length > 0){
+						self.academys =  JSON.parse(data);
 					}				
 				}
 			});
@@ -94,9 +93,9 @@ module.exports = {
 	      contentType: false,
 	      processData: false,
 	      cache: false,
-				success:function(json){
-					if (json || json.academys.length > 0){
-						self.academys =  JSON.parse(json.academys);
+				success:function(data){
+					if (data || data.length > 0){
+						self.academys =  JSON.parse(data);
 					}				
 				}
 			});

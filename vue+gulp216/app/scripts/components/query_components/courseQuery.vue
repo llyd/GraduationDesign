@@ -45,27 +45,27 @@
 	    	  contentType: false,
 	    	  processData: false,
 	    	  cache: false,
-	    	  success:function(json){
-						// if (json || json.courses.length > 0){
-						// 	self.courses =  JSON.parse(json.courses);
+	    	  success:function(data){
+						// if (data|| data.length > 0){
+						// 	self.classes =  JSON.parse(data);
 						// }				
 					}
 				});
 			},
 			rooms: function () {
 				var self = this;
-					$.ajax({
-				  	url:"/CourseQuery/room",
-						method:"POST",
-						data:"1",
-		    	  contentType: false,
-		    	  processData: false,
-		    	  cache: false,
-		    	  success:function(json){
-							// if (json || json.courses.length > 0){
-							// 	self.courses =  JSON.parse(json.courses);
-							// }				
-						}
+				$.ajax({
+			  	url:"/CourseQuery/room",
+					method:"POST",
+					data:"1",
+	    	  contentType: false,
+	    	  processData: false,
+	    	  cache: false,
+	    	  success:function(data){
+						// if (data|| data.length > 0){
+						// 	self.classes =  JSON.parse(data);
+						// }				
+					}			
 					});
 			},
 			teachers: function () {
@@ -77,11 +77,11 @@
 	    	  contentType: false,
 	    	  processData: false,
 	    	  cache: false,
-	    	  success:function(json){
-						// if (json || json.courses.length > 0){
-						// 	self.courses =  JSON.parse(json.courses);
+	    	  success:function(data){
+						// if (data|| data.length > 0){
+						// 	self.classes =  JSON.parse(data);
 						// }				
-					}
+					}	
 				});
 			},
 			courseSche: function () {
@@ -93,11 +93,11 @@
 	    	  contentType: false,
 	    	  processData: false,
 	    	  cache: false,
-	    	  success:function(json){
-						// if (json || json.courses.length > 0){
-						// 	self.courses =  JSON.parse(json.courses);
+	    	  success:function(data){
+						// if (data|| data.length > 0){
+						// 	self.classes =  JSON.parse(data);
 						// }				
-					}
+					}	
 				});
 			}
 		}

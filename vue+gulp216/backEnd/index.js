@@ -3,6 +3,27 @@ var path = require('path');
 var fs = require('fs');
 var router = require('./router.js');
 var mysql = require('./mysql');
+// var express = require('express');
+// var app = express();
+
+// app.use(express.static('_tmp'));
+
+// app.post('/Academy/getData',function(req,res){
+//     var userAddSql = 'select * from academy';
+//     mysql.query(userAddSql,function(err,results){
+//       res.send(results);
+//     }); 
+//   });
+
+// var server = app.listen(8081, function () {
+
+//   var host = server.address().address
+//   var port = server.address().port
+
+//   console.log("应用实例，访问地址为 http://%s:%s", host, port)
+
+// })
+
 
 http.createServer(function(req, res){
   console.log('request: ', req.url);

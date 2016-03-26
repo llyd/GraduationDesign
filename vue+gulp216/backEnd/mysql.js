@@ -25,7 +25,7 @@ results = {
 					callback();		
 				}
 				console.log('select: ', results);
-				callback(results);
+				callback(err,results);
 			})	
 
 		};

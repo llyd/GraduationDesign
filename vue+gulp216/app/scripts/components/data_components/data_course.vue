@@ -44,9 +44,9 @@ module.exports = {
 	      contentType: false,
 	      processData: false,
 	      cache: false,
-				success:function(json){
-					if (json || json.courses.length > 0){
-						self.courses =  JSON.parse(json.courses);
+				success:function(data){
+					if (data || data.length > 0){
+						self.courses =  JSON.parse(data);
 					}				
 				}
 			});
@@ -59,9 +59,9 @@ module.exports = {
 	      contentType: false,
 	      processData: false,
 	      cache: false,
-				success:function(json){
-					if (json || json.courses.length > 0){
-						self.courses =  JSON.parse(json.courses);
+				success:function(data){
+					if (data || data.length > 0){
+						self.courses =  JSON.parse(data);
 					}				
 				}
 			});
@@ -74,9 +74,9 @@ module.exports = {
 	      contentType: false,
 	      processData: false,
 	      cache: false,
-				success:function(json){
-					if (json || json.courses.length > 0){
-						self.courses =  JSON.parse(json.courses);
+				success:function(data){
+					if (data || data.length > 0){
+						self.courses =  JSON.parse(data);
 					}				
 				}
 			});
@@ -89,9 +89,9 @@ module.exports = {
 	      contentType: false,
 	      processData: false,
 	      cache: false,
-				success:function(json){
-					if (json || json.courses.length > 0){
-						self.courses =  JSON.parse(json.courses);
+				success:function(data){
+					if (data || data.length > 0){
+						self.courses =  JSON.parse(data);
 					}				
 				}
 			});
