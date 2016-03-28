@@ -93,7 +93,7 @@
 				margin:5px
 
 	.sub_menu
-		margin:10px 20px
+		margin:10px 0 10px 15px
 
 	.main_right
 		float:right
